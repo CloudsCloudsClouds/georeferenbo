@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'screens/map_1_screen.dart';
+import 'screens/map_2_screen.dart';
+import 'screens/map_3_screen.dart';
+import 'screens/map_4_screen.dart';
+import 'screens/map_t_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -104,12 +109,60 @@ class _MyHomePageState extends State<MyHomePage> {
           // wireframe for each widget.
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text('You have pushed the button this many times:'),
+            const Text(
+              'You have pushed the button this many times:',
+            ),
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.headlineMedium,
             ),
-          ],
+            const SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Map1Screen()),
+                );
+              },
+              child: const Text('Open Map'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Map2Screen()),
+                );
+              },
+              child: const Text('Open Map 2'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Map3Screen()),
+                );
+              },
+              child: const Text('Open Map 3'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const Map4Screen()),
+                );
+              },
+              child: const Text('Open Map 4'),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MapTScreen()),
+                );
+              },
+              child: const Text('Open Map Turístico'),
+            )
+          ]
         ),
       ),
       floatingActionButton: FloatingActionButton(
