@@ -3,6 +3,7 @@ import 'screens/map_1_screen.dart';
 import 'screens/map_2_screen.dart';
 import 'screens/map_3_screen.dart';
 import 'screens/map_4_screen.dart';
+import 'screens/map_t_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -152,7 +153,16 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: const Text('Open Map 4'),
             ),
-          ],
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const MapTScreen()),
+                );
+              },
+              child: const Text('Open Map Turístico'),
+            )
+          ]
         ),
       ),
       floatingActionButton: FloatingActionButton(
